@@ -4,14 +4,20 @@
 
     public class InvalidUserDataException : ApplicationException
     {
-        private const string Message = "Invalid user data!";
-
-        public InvalidUserDataException() : base(Message)
+        public InvalidUserDataException() : base()
         {
         }
 
         public InvalidUserDataException(string message) : base(message)
         {
+        }
+
+        public override string Message
+        {
+            get
+            {
+                return Constants.ErrorMessagesConstants.InvalidUserDataMessage;
+            }
         }
     }
 }

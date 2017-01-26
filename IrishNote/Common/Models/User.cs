@@ -104,7 +104,7 @@
                 }
                 else
                 {
-                    throw new FormatException(ErrorMessagesConstants.InvalidMeilMsg);
+                    throw new FormatException(ErrorMessagesConstants.InvalidMeilMessage);
                 }
             }
         }
@@ -120,7 +120,7 @@
             {
                 if (value.Length < 4)
                 {
-                    throw new ArgumentOutOfRangeException(ErrorMessagesConstants.InvalidPasswordMsg);
+                    throw new ArgumentOutOfRangeException(ErrorMessagesConstants.InvalidPasswordMessage);
                 }
 
                 this.password = value;
@@ -160,7 +160,7 @@
 
             if (hasError)
             {
-                throw new ArgumentException(ErrorMessagesConstants.InvalidNameFieldMsg);
+                throw new ArgumentException(ErrorMessagesConstants.InvalidNameFieldMessage);
             }
         }
     }

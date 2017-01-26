@@ -2,14 +2,20 @@
 {
     public class InvalidPasswordException : InvalidUserDataException
     {
-        private const string Message = "Invalid password!";
-
-        public InvalidPasswordException() : base(Message)
+        public InvalidPasswordException() : base()
         {
         }
 
         public InvalidPasswordException(string message) : base(message)
         {
+        }
+
+        public override string Message
+        {
+            get
+            {
+                return Constants.ErrorMessagesConstants.InvalidPasswordMessage;
+            }
         }
     }
 }

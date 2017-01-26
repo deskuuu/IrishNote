@@ -2,14 +2,20 @@
 {
     public class InvalidUsernameException : InvalidUserDataException
     {
-        private const string Message = "Invalid username!";
-
-        public InvalidUsernameException() : base(Message)
+        public InvalidUsernameException() : base()
         {
         }
 
         public InvalidUsernameException(string message) : base(message)
         {
+        }
+
+        public override string Message
+        {
+            get
+            {
+                return Constants.ErrorMessagesConstants.InvalidUsernameMessage;
+            }
         }
     }
 }
